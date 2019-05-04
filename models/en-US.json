@@ -1,0 +1,34 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "bray trains",
+      "types": [],
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "GetRemoteDataIntent",
+          "slots": [],
+          "samples": [
+            "when is the next train from Bray",
+            "train from Bray when",
+            "Bray train",
+            "Bray dart station",
+            "how long until train departs",
+            "tell me the trains from Bray"
+          ]
+        }
+      ]
+    }
+  }
+}
