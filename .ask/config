@@ -34,7 +34,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-custom-Api_test-default",
             "handler": "index.handler",
-            "revisionId": "bc70a77a-4929-48df-9d98-6a933cf97f0a",
+            "revisionId": "60393c1f-3c42-43a1-a180-9982906ef815",
             "runtime": "nodejs8.10"
           }
         ]
