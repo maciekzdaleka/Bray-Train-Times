@@ -17,7 +17,7 @@
       "in_skill_products": [],
       "resources": {
         "manifest": {
-          "eTag": "76bcd153be1537b9bab9f92d6172ed5c"
+          "eTag": "55a92ea877be31045286b3ff733c285b"
         },
         "interactionModel": {
           "en-US": {
@@ -34,7 +34,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-custom-Api_test-default",
             "handler": "index.handler",
-            "revisionId": "60393c1f-3c42-43a1-a180-9982906ef815",
+            "revisionId": "f5eda6c3-edb7-49b5-b087-07df9552b731",
             "runtime": "nodejs8.10"
           }
         ]

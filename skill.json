@@ -3,9 +3,9 @@
     "publishingInformation": {
       "locales": {
         "en-US": {
-          "summary": "Provides the time for the next three trains leaving Bray Datr station in Dublin direction.",
+          "summary": "Provides times for the next three trains leaving Bray Dart station.",
           "examplePhrases": [
-            "Alexa, ask Bray trains about train departures."
+            "Alexa, open Bray trains."
           ],
           "keywords": [
             "trains",
@@ -15,9 +15,9 @@
             "rails"
           ],
           "name": "Bray Dart Station",
-          "description": "Ask about train times",
-          "smallIconUri": "https://s3.amazonaws.com/cdn.dabblelab.com/img/skill-template-default-sm.png",
-          "largeIconUri": "https://s3.amazonaws.com/cdn.dabblelab.com/img/skill-template-default-lg.png"
+          "description": "Ask about Bray train times",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/6e65/77c89afa21dd4856aa2d38c9371d7871/APP_ICON?versionId=I03PtgW8UTjAZK88QRifDy3_ASaYYLcD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190505T155233Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190505%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=41c3837faa6b5ec57550487083870be4fa667e3447bfdb5cf25a3ee15fb9df0f",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/dbd0/1a6389a5c7334cc6a376be36a2c123fa/APP_ICON_LARGE?versionId=zlKSOTRI1n_y0fC8t5j3.hCHxO.5JbLe&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190505T155233Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190505%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=98b613c384378ae3a903f4b4464ac150ab62ee6d76f3778372f8f953ac6b6ed8"
         }
       },
       "isAvailableWorldwide": true,
