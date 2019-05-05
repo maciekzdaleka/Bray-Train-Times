@@ -22,10 +22,10 @@ const GetRemoteDataHandler = {
         var currenTime = today.getHours() + 1 + ":" + today.getMinutes();
         var minutes;
         if(data1.ArrayOfObjStationData.objStationData.length === 0  ){
-          outputSpeech = `Sorry, There are currently no trains frpm Bray to Dublin,`;
+          outputSpeech = `Sorry, There are currently no trains departuring from Bray,`;
         }
         else if (data1.ArrayOfObjStationData.objStationData.length >= 3  ){
-            outputSpeech = `Next three trains from Bray to Dublin ,`;
+            outputSpeech = `Next three trains from Bray, `;
             var amorpm = 'am';
             for (let i = 0; i < 3; i++) {
                 if (i === 0) {
@@ -38,7 +38,8 @@ const GetRemoteDataHandler = {
                 
                 }
                 minutes = parseTime(data1.ArrayOfObjStationData.objStationData[i].Expdepart) - parseTime(currenTime);
-                outputSpeech = outputSpeech + 'First train leaves in ' + minutes + ' minutes at ' + data1.ArrayOfObjStationData.objStationData[i].Expdepart + ' ' + amorpm +', '
+                outputSpeech = outputSpeech + 'First train leaves in ' + minutes + ' minutes at ' + data1.ArrayOfObjStationData.objStationData[i].Expdepart + ' ' + amorpm + 
+                ' direction ' + data1.ArrayOfObjStationData.objStationData[i].Destination + ', '
               } 
               else if (i === 1) {
                 if (parseInt(data1.ArrayOfObjStationData.objStationData[i].Expdepart) > 12){
@@ -48,7 +49,8 @@ const GetRemoteDataHandler = {
                 amorpm = 'am';
                 }
                 minutes = parseTime(data1.ArrayOfObjStationData.objStationData[i].Expdepart) - parseTime(currenTime);
-                outputSpeech = outputSpeech + 'Second train leaves in ' + minutes + ' minutes at ' + data1.ArrayOfObjStationData.objStationData[i].Expdepart + ' ' + amorpm +', '
+                outputSpeech = outputSpeech + 'Second train leaves in ' + minutes + ' minutes at ' + data1.ArrayOfObjStationData.objStationData[i].Expdepart + ' ' + amorpm + 
+                ' direction '+ data1.ArrayOfObjStationData.objStationData[i].Destination + ', '
               }
               else if (i === 2) {
                 //last record
@@ -59,7 +61,8 @@ const GetRemoteDataHandler = {
                   amorpm = 'am';
                 }
                 minutes = parseTime(data1.ArrayOfObjStationData.objStationData[i].Expdepart) - parseTime(currenTime);
-                outputSpeech = outputSpeech + 'and third train leaves in ' + minutes + ' minutes at ' + data1.ArrayOfObjStationData.objStationData[i].Expdepart + ' ' + amorpm +', '
+                outputSpeech = outputSpeech + 'and third train leaves in ' + minutes + ' minutes at ' + data1.ArrayOfObjStationData.objStationData[i].Expdepart + ' ' + amorpm + 
+                ' direction '+ data1.ArrayOfObjStationData.objStationData[i].Destination
               } else {
               // middle record(s)
               outputSpeech = outputSpeech =  'No Data,'
@@ -69,7 +72,7 @@ const GetRemoteDataHandler = {
       else if (data1.ArrayOfObjStationData.objStationData.length < 3  ){
         var train_amount = parseInt(data1.ArrayOfObjStationData.objStationData.length);
         if(train_amount > 1){
-          outputSpeech = `Next ${data1.ArrayOfObjStationData.objStationData.length} trains from Bray to Dublin,`;
+          outputSpeech = `Next ${data1.ArrayOfObjStationData.objStationData.length} trains from Bray,`;
         }
         else
         {
@@ -86,7 +89,8 @@ const GetRemoteDataHandler = {
               amorpm = 'am';
             }
             minutes = parseTime(data1.ArrayOfObjStationData.objStationData[i].Expdepart) - parseTime(currenTime);
-            outputSpeech = outputSpeech + 'First train leaves in ' + minutes + ' minutes at ' + data1.ArrayOfObjStationData.objStationData[i].Expdepart + ' ' + amorpm +', '
+            outputSpeech = outputSpeech + 'First train leaves in ' + minutes + ' minutes at ' + data1.ArrayOfObjStationData.objStationData[i].Expdepart + ' ' + amorpm 
+            ' direction '+ data1.ArrayOfObjStationData.objStationData[i].Destination + ', '
           } 
           else if (i === train_amount ) {
             if (parseInt(data1.ArrayOfObjStationData.objStationData[i].Expdepart) > 12){
@@ -96,12 +100,14 @@ const GetRemoteDataHandler = {
             amorpm = 'am';
             }
             minutes = parseTime(data1.ArrayOfObjStationData.objStationData[i].Expdepart) - parseTime(currenTime);
-            outputSpeech = outputSpeech + 'Last train leaves Bray in ' + minutes + ' minutes at ' + data1.ArrayOfObjStationData.objStationData[i].Expdepart + ' ' + amorpm +', '
+            outputSpeech = outputSpeech + 'Last train leaves Bray in ' + minutes + ' minutes at ' + data1.ArrayOfObjStationData.objStationData[i].Expdepart + ' ' + amorpm +
+            ' direction '+ data1.ArrayOfObjStationData.objStationData[i].Destination 
           }
           else {
           // middle record(s)
             minutes = parseTime(data1.ArrayOfObjStationData.objStationData[i].Expdepart) - parseTime(currenTime);
-            outputSpeech = outputSpeech + 'next train leaves in ' + minutes + ' minutes at ' + data1.ArrayOfObjStationData.objStationData[i].Expdepart + ' ' + amorpm +', '
+            outputSpeech = outputSpeech + 'next train leaves in ' + minutes + ' minutes at ' + data1.ArrayOfObjStationData.objStationData[i].Expdepart + ' ' + amorpm +
+            ' direction '+ data1.ArrayOfObjStationData.objStationData[i].Destination + ', '
           }  
     }
   }
